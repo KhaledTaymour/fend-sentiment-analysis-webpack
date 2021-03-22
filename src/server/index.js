@@ -43,7 +43,7 @@ app.get("/", function (req, res) {
 app.post("/analyze-url", async (req, res) => {
   try {
     const url = req.body.url;
-    const sentimentAnalysisURL = `${BASE_API_URL}?key=${process.env.MEANINGCLOUD_API_KEY}&url=${url}&lang=en`;
+    const sentimentAnalysisURL = `${API_BASE_URL}?key=${process.env.MEANINGCLOUD_API_KEY}&url=${url}&lang=en`;
     const data = await axios(sentimentAnalysisURL);
 
     console.log(`data.data.sentence_list[0] ${data.data.sentence_list[0]}`);
