@@ -1,7 +1,18 @@
-import { checkForName } from './js/nameChecker'
-import { handleSubmit } from './js/formHandler'
+import { validateURL } from "./js/urlChecker";
+import { handleSubmit } from "./js/formHandler";
+import "./styles/base.scss";
+import "./styles/footer.scss";
+import "./styles/form.scss";
+import "./styles/header.scss";
+import "./styles/resets.scss";
 
-console.log(checkForName);
+console.log("I EXIST");
 
-alert("I EXIST")
-console.log("CHANGE!!");
+window.addEventListener("DOMContentLoaded", () => {
+  document.querySelector(".btn-analyze").addEventListener("click", (e) => {
+    console.log("inside event listener");
+    e.preventDefault();
+    handleSubmit();
+  });
+});
+export { handleSubmit, validateURL };
