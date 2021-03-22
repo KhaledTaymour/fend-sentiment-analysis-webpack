@@ -10,7 +10,7 @@
 
 - [ ] Have a minimum of one form field
 
-- [ ] Make one request to the Aylien API
+- [ ] Make one request to the meaningcloud API
 
 - [ ] Use Sass for styling
 
