@@ -7,13 +7,14 @@
 
   <body>
     <header>
-      <div class="">Logo</div>
-      <div class="">navigation</div>
+      <h1>Sentiment Analysis</h1>
+      <h3>using Webpack</h3>
     </header>
 
     <main>
       <section>
         <form class="" onsubmit="return handleSubmit(event)">
+          Please Enter an article Url
           <input
             class="url-input"
             type="text"
@@ -22,43 +23,44 @@
           />
           <button class="btn-analyze" value="Analyze">Analyze</button>
         </form>
+        <div class="loading">Loading ...</div>
       </section>
 
       <section>
         <strong>Form Results:</strong>
         <div class="analysis-results">
-          <div class="analysis-results__agreement">
-            <div>Agreement</div>
+          <div class="analysis-results__agreement property">
+            <div class="propertry-name">Agreement</div>
             <div class="analysis-results__agreement-value"></div>
           </div>
-          <div class="analysis-results__confidence">
-            <div>Confidence</div>
+          <div class="analysis-results__confidence property">
+            <div class="propertry-name">Confidence</div>
             <div class="analysis-results__confidence-value"></div>
           </div>
-          <div class="analysis-results__irony">
-            <div>Irony</div>
+          <div class="analysis-results__irony property">
+            <div class="propertry-name">Irony</div>
             <div class="analysis-results__irony-value"></div>
           </div>
-          <div class="analysis-results__score_tag">
-            <div>Score Tag</div>
+          <div class="analysis-results__score_tag property">
+            <div class="propertry-name">Score Tag</div>
             <div class="analysis-results__score_tag-value"></div>
           </div>
-          <div class="analysis-results__subjectivity">
-            <div>Subjectivity</div>
+          <div class="analysis-results__subjectivity property">
+            <div class="propertry-name">Subjectivity</div>
             <div class="analysis-results__subjectivity-value"></div>
           </div>
-          <div class="analysis-results__text">
-            <div>Text</div>
+          <div class="analysis-results__text property">
+            <div class="propertry-name">Text</div>
             <div class="analysis-results__text-value"></div>
           </div>
         </div>
       </section>
     </main>
 
-    <footer>
-      <p>This is a footer</p>
+    <footer class="footer">
+      <a href="https://github.com/KhaledTaymour">Khaled Taymour</a>
     </footer>
-    <script>
+    <!-- <script>
       // Check that service workers are supported
       if ("serviceWorker" in navigator) {
         // Use the window load event to keep the page load performant
@@ -66,6 +68,6 @@
           navigator.serviceWorker.register("/service-worker.js");
         });
       }
-    </script>
+    </script> -->
   </body>
 </html>

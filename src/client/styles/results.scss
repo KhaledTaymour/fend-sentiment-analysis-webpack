@@ -1,0 +1,16 @@
+.analysis-results {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+
+  .property {
+      display: flex;
+      gap: 2px;
+  }
+
+  .propertry-name {
+    color: white;
+    background-color: black;
+    width: 200px;
+  }
+}

@@ -35,7 +35,9 @@ export const handleSubmit = async () => {
   const url = document.querySelector(".url-input").value;
 
   if (client.validateURL(url)) {
+    document.querySelector(".loading").classList.remove("hideLoading");
     const data = await post("http://localhost:8081/analyze-url", { url });
+    document.querySelector(".loading").classList.add("hideLoading");
     console.log("then in formhandler", data);
     updateResults(data);
   } else {
