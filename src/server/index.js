@@ -46,14 +46,12 @@ app.post("/analyze-url", async (req, res) => {
     const sentimentAnalysisURL = `${API_BASE_URL}?key=${process.env.MEANINGCLOUD_API_KEY}&url=${url}&lang=en`;
     const data = await axios(sentimentAnalysisURL);
 
-    console.log(`data.data.sentence_list[0] ${data.data.sentence_list[0]}`);
-
     res.send({
       agreement: data.data.agreement,
-      subjectivity: data.data.subjectivity,
-      irony: data.data.irony,
       confidence: data.data.confidence,
+      irony: data.data.irony,
       score_tag: data.data.score_tag,
+      subjectivity: data.data.subjectivity,
       text: data.data.sentence_list[0].text,
     });
   } catch (error) {
